@@ -1,0 +1,595 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Parametro */
+body {
+  background-color: whitesmoke;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body .appSection {
+  background-color: #323746;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 360px;
+  max-height: 649px;
+  margin: 2vh auto;
+  min-height: 649px;
+  align-items: center;
+  /* Label */
+  /* active */
+  /* Underline */
+  /* active */
+  /* Highlight */
+  /* active */
+  /* Animations */
+  /* Button */
+  /* Button modifiers */
+  /*vistas.html*/
+}
+body .appSection .onboarding {
+  width: 100%;
+  max-width: 25.875rem;
+  min-height: 41.6875rem;
+}
+body .appSection header {
+  color: #FFFFFF;
+  background-color: #10BEF0;
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 21px 9px;
+}
+body .appSection header .title {
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+}
+body .appSection header .logo {
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #10BEF0;
+  color: #FFFFFF;
+}
+body .appSection hr {
+  background-color: #10BEF0;
+  border-color: #10BEF0;
+  height: 2px;
+}
+body .appSection form {
+  max-width: 294px;
+  margin: 3em auto;
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+body .appSection .group {
+  position: relative;
+  margin-bottom: 45px;
+}
+body .appSection input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  -webkit-appearance: none;
+  display: block;
+  background: #323746;
+  color: #636363;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #757575;
+}
+body .appSection input:focus {
+  outline: none;
+}
+body .appSection label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: all 0.2s ease;
+}
+body .appSection input:focus ~ label, body .appSection input.used ~ label {
+  top: -20px;
+  transform: scale(0.95);
+  left: -2px;
+  font-size: 14px;
+  color: #10BEF0;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+}
+body .appSection .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+body .appSection .bar:before, body .appSection .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #10BEF0;
+  transition: all 0.2s ease;
+}
+body .appSection .bar:before {
+  left: 50%;
+}
+body .appSection .bar:after {
+  right: 50%;
+}
+body .appSection input:focus ~ .bar:before, body .appSection input:focus ~ .bar:after {
+  width: 50%;
+}
+body .appSection .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+body .appSection input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+@keyframes inputHighlighter {
+  from {
+    background: #10BEF0;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+body .appSection .button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0.3em 0 1em 0;
+  width: 100%;
+  vertical-align: middle;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+body .appSection .button:focus {
+  outline: 0;
+}
+body .appSection .buttonBlue {
+  background: #10BEF0;
+  box-shadow: 2px 2px 0 rgba(42, 57, 76, 0.5);
+  border-radius: 10px;
+}
+body .appSection .buttonBlue:hover {
+  opacity: 75%;
+}
+body .appSection .cta {
+  display: flex;
+  flex-direction: column;
+}
+body .appSection .cta a {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 10px auto;
+  text-decoration: none;
+  color: #10BEF0;
+}
+body .appSection a .second-cta {
+  color: #747474;
+}
+body .appSection p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+body .appSection .btn-ob {
+  display: flex;
+  flex-direction: row;
+  border: solid 2px #FFFFFF;
+  border-radius: 10px;
+  justify-content: space-between;
+  box-sizing: content-box;
+  padding: 15px;
+  margin: 15px auto;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  min-width: 282px;
+  max-width: 283px;
+  min-height: 134px;
+}
+body .appSection .btn-ob:hover {
+  border: solid 2px #10BEF0;
+  background-color: #10BEF0;
+}
+body .appSection .btn-ob span {
+  max-width: 57px;
+}
+
+/* Drop Down Style */
+.float-right {
+  float: right;
+}
+
+.fa {
+  font-size: 0.8em;
+  line-height: 22px !important;
+}
+
+dropdown {
+  display: inline-block;
+  margin: auto;
+}
+
+dropdown label, dropdown ul li {
+  display: block;
+  width: 298px;
+  background: #10BEF0;
+  padding: 15px 20px;
+  position: relative;
+}
+
+dropdown label:hover, dropdown ul li:hover {
+  background: #10BEF0;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+dropdown > label {
+  position: relative;
+}
+
+dropdown label {
+  color: #10BEF0;
+  border-left: 4px solid #10BEF0;
+  border-radius: 0 5px 0 0;
+  z-index: 2;
+  position: relative;
+}
+
+dropdown input {
+  display: none;
+}
+
+dropdown input ~ ul {
+  visibility: hidden;
+  opacity: 0;
+  top: -20px;
+  z-index: 1;
+}
+
+dropdown input:checked + label {
+  background: #10BEF0;
+  color: white;
+}
+
+dropdown input:checked ~ ul {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+
+dropdown ul li:nth-child(1) {
+  border-left: 4px solid #E74C3C;
+}
+dropdown ul li:nth-child(1) .fa {
+  color: #E74C3C;
+}
+dropdown ul li:nth-child(1):hover {
+  background: #E74C3C;
+  color: white;
+}
+dropdown ul li:nth-child(1):hover .fa {
+  color: white;
+}
+
+dropdown ul li:nth-child(2) {
+  border-left: 4px solid #0072B5;
+}
+dropdown ul li:nth-child(2) .fa {
+  color: #0072B5;
+}
+dropdown ul li:nth-child(2):hover {
+  background: #0072B5;
+  color: white;
+}
+dropdown ul li:nth-child(2):hover .fa {
+  color: white;
+}
+
+dropdown ul li:nth-child(3) {
+  border-left: 4px solid #2C3E50;
+}
+dropdown ul li:nth-child(3) .fa {
+  color: #2C3E50;
+}
+dropdown ul li:nth-child(3):hover {
+  background: #2C3E50;
+  color: white;
+}
+dropdown ul li:nth-child(3):hover .fa {
+  color: white;
+}
+
+.animate {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer */
+  position: relative;
+}
+
+<<<<<<< HEAD
+/*nati cuentas y version desktop */
+.container-datos {
+  margin-top: 2rem;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.77px;
+  color: #77838F;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-respuestas {
+  margin-top: 0.7rem;
+  letter-spacing: 0.77px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #C1C1C1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.conectar-web {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.conteiner-qr {
+  margin-top: 3rem;
+=======
+/*IMG CALENDARIO*/
+.img-calen {
+  background-image: url("img-vistcal-off.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+}
+
+.btn-ob .img-calen:hover {
+  background-image: url("img-vistacal-on.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+}
+
+/*IMG MATERIAS*/
+.img-mat {
+  background-image: url("img-vistamat-off.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+}
+
+.btn-ob .img-mat:hover {
+  background-image: url("img-vistamat-on.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+}
+
+/* CAJAS */
+.btn {
+  display: flex;
+  flex-direction: row;
+  border: solid 2px #FFFFFF;
+  border-radius: 10px;
+  justify-content: space-between;
+  box-sizing: content-box;
+  padding: 10px;
+  margin: 15px;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  font-size: 24px;
+  line-height: 28px;
+  min-width: 282px;
+  max-width: 283px;
+  min-height: 74px;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background-color: #323746;
+  box-shadow: 2px 2px 0 rgba(42, 57, 76, 0.5);
+  border-radius: 10px;
+}
+
+.caladm {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+}
+
+.cta .ot-cta {
+  font-family: roboto;
+  font-size: 13px;
+  color: #10BEF0;
+  display: flex;
+  margin: 10px 140px;
+}
+
+.img-mat {
+  background-image: url("img-materias.svg");
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1px 50px;
+  display: inline-block;
+  flex-direction: row;
+  margin: 0px;
+}
+
+.radiobtn {
+  background-image: url("radio_button_unchecked-white-18dp.svg");
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1px 23px;
+}
+
+.radiobtn:hover {
+  background-image: url("radiobtn-on.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 50px;
+}
+
+/*CALENDARIO ADM*/
+.img-cal {
+  background-image: url("img-calenadm.svg");
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1px 50px;
+  display: inline;
+  margin: 0px;
+}
+
+.radiobtncal {
+  background-image: url("radio_button_unchecked-white-18dp.svg");
+  width: 60px;
+  height: 40px;
+  display: inline;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1px 23px;
+  padding: 5px;
+}
+
+.radiobtncal:hover {
+  background-image: url("radiobtn-on.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 40px;
+}
+
+.btn:hover {
+  background-color: #10BEF0;
+  display: relative;
+  width: auto;
+}
+
+/*CONFIRMAR*/
+.btn-cta {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px 20px;
+  width: 300px;
+  vertical-align: middle;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  letter-spacing: 1px;
+  background: #10BEF0;
+  border: 0;
+  border-radius: 3px;
+}
+
+/*INICIAR SESION*/
+.ot-cta {
+  font-family: roboto, sans-serif;
+  font-size: 13px;
+  color: #10BEF0;
+  display: inline-block;
+  overflow: hidden;
+>>>>>>> 6495e2329c0893f1d28c4a208c056934e20aef53
+}
+
+/*# sourceMappingURL=style.css.map */
