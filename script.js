@@ -1,74 +1,169 @@
-// Will hold previously focused element
-var focusedElementBeforeModal;
+//Cambio tabs seccion ESTADISTICAS
+(function (document, window, $, undefined) {
+  'use strict';
 
-// Find the modal and its overlay
-var modal = document.querySelector('.modal');
-var modalOverlay = document.querySelector('.modal-overlay');
+  var $tabWidget = $('.js-tab-widget');
 
-var modalToggle = document.querySelector('.modal-toggle');
-modalToggle.addEventListener('click', openModal);
+  var setupTabs = function($tab, $allTabs, $tabPanels, $tabListItems, i) {
+      $tab
+          .attr({
+              'id': 'tab-link-' + i,
+              'tabindex': '-1',
+              'role': 'tab',
+              'aria-selected': 'false',
+              'aria-controls': 'tab-panel-' + i
+          });
 
-function openModal() {
-  // Save current focus
-  focusedElementBeforeModal = document.activeElement;
-
-  // Listen for and trap the keyboard
-  modal.addEventListener('keydown', trapTabKey);
-
-  // Listen for indicators to close the modal
-  modalOverlay.addEventListener('click', closeModal);
-  // Sign-Up button
-  var signUpBtn = modal.querySelector('#signup');
-  signUpBtn.addEventListener('click', closeModal);
-
-  // Find all focusable children
-  var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
-  var focusableElements = modal.querySelectorAll(focusableElementsString);
-  // Convert NodeList to Array
-  focusableElements = Array.prototype.slice.call(focusableElements);
-
-  var firstTabStop = focusableElements[0];
-  var lastTabStop = focusableElements[focusableElements.length - 1];
-
-  // Show the modal and overlay
-  modal.style.display = 'block';
-  modalOverlay.style.display = 'block';
-
-  // Focus first child
-  firstTabStop.focus();
-
-  function trapTabKey(e) {
-    // Check for TAB key press
-    if (e.keyCode === 9) {
-
-      // SHIFT + TAB
-      if (e.shiftKey) {
-        if (document.activeElement === firstTabStop) {
-          e.preventDefault();
-          lastTabStop.focus();
-        }
-
-      // TAB
-      } else {
-        if (document.activeElement === lastTabStop) {
-          e.preventDefault();
-          firstTabStop.focus();
-        }
+      if (i === 0) {
+          $tab
+              .attr({
+                  'tabindex': '0',
+                  'aria-selected': 'true',
+                  'aria-describedby': 'tab-widget-description'
+              })
+              .addClass('tab-widget__link--active');
       }
-    }
 
-    // ESCAPE
-    if (e.keyCode === 27) {
-      closeModal();
-    }
-  }
-}
+      $tab.on('click', function(e) {
+          e.preventDefault();
 
-function closeModal() {
-  // Hide the modal and overlay
-  modal.style.display = 'none';
-  modalOverlay.style.display = 'none';
+          tabClick($(this),  $allTabs, $tabPanels, i);
+      });
+    
+      $tab.on('focus', function(e) {
+          tabClick($(this),  $allTabs, $tabPanels, i);
+      });
 
-  // Set focus back to element that had it before the modal was opened
-  focusedElementBeforeModal.focus();
-}
+      $tab.on('keyup', function (e) {
+          tabKeydown($(this), $allTabs, $tabPanels, $tabListItems, i, e);
+      });
+  };
+
+  var setupTabPanels = function(tabPanel, i) {
+      tabPanel
+          .attr({
+              'id': 'tab-panel-' + i,
+              'role': 'tabpanel',
+              'aria-hidden': 'true',
+              'aria-labelledby': 'tab-link-' + i
+          });
+
+      if (i === 0) {
+          tabPanel
+              .attr('aria-hidden', 'false')
+              .addClass('tab-widget__tab-content--active');
+      }
+  };
+
+  var tabClick = function($thisTab, $allTabs, $tabPanels, i) {
+      $allTabs
+          .attr({
+              'tabindex': -1,
+              'aria-selected': 'false'
+          })
+          .removeAttr('aria-describedby')
+          .removeClass('tab-widget__link--active');
+
+      $thisTab
+          .attr({
+              'tabindex': 0,
+              'aria-selected': 'true',
+              'aria-describedby': 'tab-widget-description'
+          })
+          .addClass('tab-widget__link--active');
+
+      $tabPanels
+          .attr('aria-hidden', 'true')
+          .removeClass('tab-widget__tab-content--active');
+
+      $tabPanels.eq(i)
+          .attr('aria-hidden', 'false')
+          .addClass('tab-widget__tab-content--active');
+  };
+
+  var tabKeydown = function($thisTab, $allTabs, $tabPanels, $tabListItems, i, e) {
+      var keyCode = e.which,
+          $nextTab = $thisTab.parent().next().is('li') ? $thisTab.parent().next().find('a') : false,
+          $previousTab = $thisTab.parent().prev().is('li') ? $thisTab.parent().prev().find('a') : false,
+          $firstTab = $thisTab.parent().parent().find('li:first').find('a'),
+          $lastTab = $thisTab.parent().parent().find('li:last').find('a');
+
+      switch(keyCode) {
+          // Left/Up
+          case 37:
+          case 38:
+              e.preventDefault();
+              e.stopPropagation();
+
+              if (!$previousTab) {
+                  $lastTab.focus();
+              } else {
+                  $previousTab.focus();
+              }
+
+              break;
+
+          // Right/Down
+          case 39:
+          case 40:
+              e.preventDefault();
+              e.stopPropagation();
+
+              if (!$nextTab) {
+                  $firstTab.focus();
+              } else {
+                  $nextTab.focus();
+              }
+
+              break;
+
+          // Home
+          case 36:
+              e.preventDefault();
+              e.stopPropagation();
+
+              $firstTab.focus();
+
+              break;
+
+          // End
+          case 35:
+              e.preventDefault();
+              e.stopPropagation();
+
+              $lastTab.focus();
+
+              break;
+
+          // Enter/Space
+          case 13:
+          case 32:
+              e.preventDefault();
+              e.stopPropagation();
+
+              break;
+      }
+  };
+
+  $tabWidget.each(function () {
+      var $this = $(this),
+          $tabList = $this.find('> ul'),
+          $tabListItems = $tabList.find('li'),
+          $allTabs = $tabListItems.find('a'),
+          $tabPanels = $this.find('> div > div');
+
+      $tabList.attr('role', 'tablist');
+      $tabListItems.attr('role', 'presentation');
+
+      $allTabs.each(function (i) {
+          setupTabs($(this), $allTabs, $tabPanels, $tabListItems, i);
+      });
+
+      $tabPanels.each(function (i) {
+          setupTabPanels($(this), i);
+      });
+  });
+
+$('html').addClass('js').removeClass('no-js');
+
+})(document, window, jQuery);
