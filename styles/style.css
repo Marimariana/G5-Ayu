@@ -28,6 +28,15 @@ body {
   margin: 0;
   padding: 0;
   /*Contenido tab estadisticas*/
+  /* Tab styling (optional) */
+  /* White focus ring - so you can see when it's focussed (not required) */
+  /* Section styling (optional) */
+  /* tab & panel colour */
+  /* 
+  Section styling (required)
+  Removes hidden sections from the keychain. 
+  Only used when JavaScript is available.
+  */
 }
 body .appSection {
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
@@ -38,44 +47,74 @@ body .appSection {
   min-height: 649px;
   align-items: center;
 }
-body .tab-widget__list {
-  list-style-type: none;
-  margin: 0;
+body .tl_container {
+  margin: 2rem 0;
+}
+body .tl_list {
+  display: flex;
   padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: left;
+  list-style: none;
 }
-body .tab-widget__item {
-  display: inline;
-  margin-right: 5px;
+body .tl_list li {
+  margin: 0;
+  width: 33.3333%;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
 }
-body .tab-widget__link {
-  background-color: FireBrick;
-  border-radius: 5px 5px 0 0;
-  color: White;
-  font-weight: bold;
-  line-height: 2.1;
-  padding: 0.5em 1.5em;
-  text-decoration: none;
-}
-body .tab-widget__link:focus,
-body .tab-widget__link:hover {
-  color: White;
-}
-body .tab-widget__link--active {
-  background-color: Crimson;
-  color: white;
-}
-body .tab-widget__tabs {
-  background-color: WhiteSmoke;
-  border: solid Firebrick 1px;
-  border-radius: 0 5px 5px 5px;
-  padding: 1em;
-}
-body .tab-widget__tab-content {
-  display: none;
-}
-body .tab-widget__tab-content--active,
-body .no-js .tab-widget__tab-content {
+body .tl_list a {
+  color: #fff;
+  padding: 1rem 0.5rem;
   display: block;
+  border: none;
+  text-decoration: none;
+  text-shadow: none;
+}
+body .tl_list a:hover,
+body .tl_list a:focus {
+  text-shadow: 0 2px 4px #000;
+}
+body .tl_section h2:focus {
+  outline: 1px solid currentcolor;
+}
+body .tl_section {
+  padding: 1rem 1.5rem;
+  min-height: 8rem;
+  border-radius: 0 0 4px 4px;
+  text-shadow: none;
+}
+body .tl_section h2 {
+  margin-top: 1rem;
+}
+body .a,
+body .a:hover,
+body .a:focus {
+  background-color: rgba(255, 85, 160, 0.3);
+}
+body .b,
+body .b:hover,
+body .b:focus {
+  background-color: rgba(160, 255, 85, 0.3);
+}
+body .c,
+body .c:hover,
+body .c:focus {
+  background-color: rgba(85, 160, 255, 0.3);
+}
+body .d,
+body .d:hover,
+body .d:focus {
+  background-color: rgba(85, 160, 255, 0.25);
+}
+body .e,
+body .e:hover,
+body .e:focus {
+  background-color: rgba(85, 160, 255, 0.5);
+}
+body [role=tabpanel][aria-hidden=true] {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
