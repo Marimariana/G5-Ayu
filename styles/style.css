@@ -119,6 +119,14 @@ body [role=tabpanel][aria-hidden=true] {
   display: none;
 }
 
+/*Graficos*/
+#container {
+  min-width: 310px;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+}
+
 /*Title*/
 h1 {
   color: black;

@@ -217,54 +217,70 @@ accessibleTabs6.init({
 
 /* Despues edito este gráfico*/
 
-Highcharts.chart('container', {
+Highcharts.chart("container", {
   chart: {
-    type: 'column'
+    type: "column",
+    zoomType: "y"
   },
   title: {
-    text: 'Viaje de vacaciones'
+    text: "Viaje de vacaciones"
   },
   subtitle: {
     text: 'Completaste el 70%'
   },
-  subtitle: {
-    text: 'Periodo: 11 meses, 17 días'
-  },
   xAxis: {
     categories: [
-      'Ene',
-      'Feb',
-      'Mar',
-      'Abr',
-      'May',
-      'Jun',
-      'Jul',
-      'Ago',
-      'Sept',
-      'Oct',
-      'Nov',
-      'Dic'
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre"
     ],
-    crosshair: true
+    title: {
+      text: null
+    },
+    accessibility: {
+      description: "Mes"
+    }
   },
- 
-  tooltip: {
-    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-      '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
-    footerFormat: '</table>',
-    shared: true,
-    useHTML: true
+  yAxis: {
+    min: 0,
+    tickInterval: 2,
+    title: {
+      text: "."
+    },
+    labels: {
+      overflow: "justify",
+      format: "{value}"
+    }
   },
   plotOptions: {
     column: {
-      pointPadding: 0.2,
-      borderWidth: 0
+      dataLabels: {
+        enabled: true,
+        format: " "
+      }
     }
   },
-  series: [{
-    name: 'Pesos ahorrados',
-    data: [4837, 4136, 4413, 5520, 5519, 4563, 4796, 5709, 5312, 4034, 4252, 4886]
-
-  }]
+  tooltip: {
+    valueSuffix: " Pesos",
+    stickOnContact: true,
+    backgroundColor: "rgba(255, 255, 255, 0.93)"
+  },
+  legend: {
+    enabled: false
+  },
+  series: [
+    {
+      name: "Ahorrado en el mes",
+      data: [600, 630, 543, 440, 250, 230, 160, 100, 120, 230, 320],
+      borderColor: "#5997DE"
+    }
+  ]
 });
