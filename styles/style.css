@@ -156,8 +156,9 @@ body .tl_section {
 body .tl_section h2 {
   margin-top: 1rem;
 }
+
 .highcharts-credits {
-  display:none;
+  display: none;
 }
 
 body .a,
@@ -206,7 +207,30 @@ body [role=tabpanel][aria-hidden=true] {
   margin: 0 auto;
 }
 
+.resumen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.resumen .money {
+  font-size: 20px;
+}
 
+.consolidado {
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: space-around;
+    justify-content: space-between;
+    border-top: solid 1px grey;
+    padding: 24px 16px;
+    width: 100vw;
+    margin-top: 24px;
+    background-color: white;
+}
+.consolidado .money {
+  font-size: 20px;
+}
 
 /*Title*/
 h1 {

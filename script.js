@@ -216,7 +216,7 @@ accessibleTabs6.init({
 
 
 /* Despues edito este gráfico*/
-/* GRAFICO DE BARRAS*/
+
 Highcharts.chart("container", {
   chart: {
     type: "column",
@@ -251,7 +251,7 @@ Highcharts.chart("container", {
   },
   yAxis: {
     min: 0,
-    tickInterval: 350,
+    tickInterval: 100,
     title: {
       text: "."
     },
@@ -264,7 +264,7 @@ Highcharts.chart("container", {
     column: {
       dataLabels: {
         enabled: true,
-        format: " "
+        format: "{y} pesos argentinos"
       }
     }
   },
@@ -279,14 +279,11 @@ Highcharts.chart("container", {
   series: [
     {
       name: "Ahorrado en el mes",
-      data: [600, 630, 543, 440, 250, 230, 160, 100, 120, 230, 320],
-      borderColor: "#3700B3",
-      backgroundColor: "#3700B3"
+      data: [600, 630, 543, 440, 250, 231, 160, 100, 120, 230, 320],
+      borderColor: "#5997DE"
     }
   ]
 });
-
-/*GRAFICO DONA*/
 
 Highcharts.chart('container-pie', {
   colors: ['#6200EE', '#6D7072', '#FAA74B', '#B37CD2'],
@@ -320,6 +317,206 @@ Highcharts.chart('container-pie', {
     }, {
       name: 'Faltan',
       y: 20.9
+    }]
+  }]
+});
+
+/* Section B*/
+Highcharts.chart("container_b", {
+  chart: {
+    type: "column",
+    zoomType: "y"
+  },
+  title: {
+    text: "Viaje de vacaciones"
+  },
+  subtitle: {
+    text: 'Completaste el 70%'
+  },
+  xAxis: {
+    categories: [
+      "Semana 1",
+      "Semana 2",
+      "Semana 3",
+      "Semana 4"
+    ],
+    title: {
+      text: null
+    },
+    accessibility: {
+      description: "Semana"
+    }
+  },
+  yAxis: {
+    min: 0,
+    tickInterval: 10,
+    title: {
+      text: "."
+    },
+    labels: {
+      overflow: "justify",
+      format: "{value}"
+    }
+  },
+  plotOptions: {
+    column: {
+      dataLabels: {
+        enabled: true,
+        format: "{y} pesos argentinos"
+      }
+    }
+  },
+  tooltip: {
+    valueSuffix: " Pesos",
+    stickOnContact: true,
+    backgroundColor: "rgba(255, 255, 255, 0.93)"
+  },
+  legend: {
+    enabled: false
+  },
+  series: [
+    {
+      name: "Ahorrado en el mes",
+      data: [60, 60, 54, 44],
+      borderColor: "#5997DE"
+    }
+  ]
+});
+
+Highcharts.chart('container-pie_b', {
+  colors: ['#6200EE', '#6D7072', '#FAA74B', '#B37CD2'],
+  chart: {
+    type: 'pie'
+  },
+  title: {
+    text: 'Consolidado'
+  },
+  tooltip: {
+    valueSuffix: '%'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}: {y} %'
+      },
+      showInLegend: false
+    }
+  },
+  series: [{
+    name: 'Porcentaje',
+    colorByPoint: true,
+    innerSize: '75%',
+    data: [{
+      name: 'Ahorrado',
+      y: 60
+    }, {
+      name: 'Falto',
+      y: 30
+    }]
+  }]
+});
+
+
+/*Section C*/
+Highcharts.chart("container_c", {
+  chart: {
+    type: "column",
+    zoomType: "y"
+  },
+  title: {
+    text: "Viaje de vacaciones"
+  },
+  subtitle: {
+    text: 'Completaste el 55%'
+  },
+  xAxis: {
+    categories: [
+      "Lunes",
+      "Martes",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado",
+      "Domingo"
+    ],
+    title: {
+      text: null
+    },
+    accessibility: {
+      description: "Día"
+    }
+  },
+  yAxis: {
+    min: 0,
+    tickInterval: 10,
+    title: {
+      text: "."
+    },
+    labels: {
+      overflow: "justify",
+      format: "{value}"
+    }
+  },
+  plotOptions: {
+    column: {
+      dataLabels: {
+        enabled: true,
+        format: "{y} pesos argentinos"
+      }
+    }
+  },
+  tooltip: {
+    valueSuffix: " Pesos",
+    stickOnContact: true,
+    backgroundColor: "rgba(255, 255, 255, 0.93)"
+  },
+  legend: {
+    enabled: false
+  },
+  series: [
+    {
+      name: "Ahorrado en el mes",
+      data: [60, 60, 43, 40, 20, 31, 16],
+      borderColor: "#5997DE"
+    }
+  ]
+});
+
+Highcharts.chart('container-pie_c', {
+  colors: ['#6200EE', '#6D7072', '#FAA74B', '#B37CD2'],
+  chart: {
+    type: 'pie'
+  },
+  title: {
+    text: 'Consolidado'
+  },
+  tooltip: {
+    valueSuffix: '%'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}: {y} %'
+      },
+      showInLegend: false
+    }
+  },
+  series: [{
+    name: 'Porcentaje',
+    colorByPoint: true,
+    innerSize: '75%',
+    data: [{
+      name: 'Ahorrado',
+      y: 55
+    }, {
+      name: 'Faltan',
+      y: 45
     }]
   }]
 });
