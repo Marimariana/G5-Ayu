@@ -216,7 +216,7 @@ accessibleTabs6.init({
 
 
 /* Despues edito este gráfico*/
-
+/* GRAFICO DE BARRAS*/
 Highcharts.chart("container", {
   chart: {
     type: "column",
@@ -251,7 +251,7 @@ Highcharts.chart("container", {
   },
   yAxis: {
     min: 0,
-    tickInterval: 2,
+    tickInterval: 350,
     title: {
       text: "."
     },
@@ -280,7 +280,46 @@ Highcharts.chart("container", {
     {
       name: "Ahorrado en el mes",
       data: [600, 630, 543, 440, 250, 230, 160, 100, 120, 230, 320],
-      borderColor: "#5997DE"
+      borderColor: "#3700B3",
+      backgroundColor: "#3700B3"
     }
   ]
+});
+
+/*GRAFICO DONA*/
+
+Highcharts.chart('container-pie', {
+  colors: ['#6200EE', '#6D7072', '#FAA74B', '#B37CD2'],
+  chart: {
+    type: 'pie'
+  },
+  title: {
+    text: 'Consolidado'
+  },
+  tooltip: {
+    valueSuffix: '%'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}: {y} %'
+      },
+      showInLegend: false
+    }
+  },
+  series: [{
+    name: 'Porcentaje',
+    colorByPoint: true,
+    innerSize: '75%',
+    data: [{
+      name: 'Ahorrado',
+      y: 78
+    }, {
+      name: 'Faltan',
+      y: 20.9
+    }]
+  }]
 });

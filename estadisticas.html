@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -20,16 +19,23 @@
 <body>
     <div class='appSection'>
         <header class="header-estadisticas">
-            <div class="info-ppl">
-                <h2>Estado actual</h2>
-                <p>Saldo actual</p>
-                <h3>$100.000</h3>
-            </div>
-            <div class="header-second-info">
-                <ul id="herramientas" role="toolbar">
-                    <li id="notificaciones" role="button"></li>
-                    <li id="expandir información" role="button"></li>
-                </ul>
+            <div>
+                <div class="noti"><img alt="Notificaciones" src="img/notif.svg"></div>
+                <div id="Name">
+                    <h1>Estado actual</h1>
+                </div>
+                <div class="saldo">
+                    <div>
+                        <p class="minitext">Saldo actual</p>
+                        <h3 class="money">$422.000</h3>
+                    </div>
+                    <div>
+                        <select name="moneda" class="moneda">
+                            <option value="ARS">ARS</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </header>
         <main>
@@ -49,7 +55,10 @@
                     <section id=A class="tl_section a">
                         <div>
                             <div id="container"></div>
-                            </div>
+                        </div>
+                        <div>
+                            <div id="container-pie"></div>
+                        </div>
                     </section>
 
                     <section id=B class="tl_section b">
