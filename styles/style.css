@@ -200,11 +200,26 @@ body [role=tabpanel][aria-hidden=true] {
 }
 
 /*Graficos*/
-#container {
+#container, #container_b, #container_c {
   min-width: 310px;
   max-width: 800px;
-  height: 400px;
+  height: 30vh;
   margin: 0 auto;
+}
+
+#container-pie, #container-pie_b, #container-pie_c {
+  height: 30vh;
+  width: 60vw;
+}
+
+.highcharts-point.highcharts-color-0 {
+  fill:#6200EE;
+}
+.highcharts-data-label-connector.highcharts-color-1, 
+.highcharts-label.highcharts-data-label.highcharts-data-label-color-0,
+.highcharts-label.highcharts-data-label.highcharts-data-label-color-1,
+.highcharts-data-label-connector.highcharts-color-0 {
+  display: none;
 }
 
 .resumen {
@@ -215,6 +230,7 @@ body [role=tabpanel][aria-hidden=true] {
 .resumen .money {
   font-size: 20px;
 }
+
 
 .consolidado {
   display: flex;
@@ -393,7 +409,11 @@ body .appSection main {
 nav {
   background-color: white;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  width: 100%;
+  width: 103vw;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  position: fixed;
 }
 
 nav ul {

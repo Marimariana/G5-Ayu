@@ -223,10 +223,10 @@ Highcharts.chart("container", {
     zoomType: "y"
   },
   title: {
-    text: "Viaje de vacaciones"
+    text: " "
   },
   subtitle: {
-    text: 'Completaste el 70%'
+    text: ' '
   },
   xAxis: {
     categories: [
@@ -264,7 +264,7 @@ Highcharts.chart("container", {
     column: {
       dataLabels: {
         enabled: true,
-        format: "{y} pesos argentinos"
+        format: "{y} pesos"
       }
     }
   },
@@ -291,7 +291,7 @@ Highcharts.chart('container-pie', {
     type: 'pie'
   },
   title: {
-    text: 'Consolidado'
+    text: ' '
   },
   tooltip: {
     valueSuffix: '%'
@@ -328,10 +328,10 @@ Highcharts.chart("container_b", {
     zoomType: "y"
   },
   title: {
-    text: "Viaje de vacaciones"
+    text: " "
   },
   subtitle: {
-    text: 'Completaste el 70%'
+    text: ' '
   },
   xAxis: {
     categories: [
@@ -362,7 +362,7 @@ Highcharts.chart("container_b", {
     column: {
       dataLabels: {
         enabled: true,
-        format: "{y} pesos argentinos"
+        format: "{y} pesos"
       }
     }
   },
@@ -389,7 +389,7 @@ Highcharts.chart('container-pie_b', {
     type: 'pie'
   },
   title: {
-    text: 'Consolidado'
+    text: ' '
   },
   tooltip: {
     valueSuffix: '%'
@@ -427,10 +427,10 @@ Highcharts.chart("container_c", {
     zoomType: "y"
   },
   title: {
-    text: "Viaje de vacaciones"
+    text: " "
   },
   subtitle: {
-    text: 'Completaste el 55%'
+    text: ' '
   },
   xAxis: {
     categories: [
@@ -464,7 +464,7 @@ Highcharts.chart("container_c", {
     column: {
       dataLabels: {
         enabled: true,
-        format: "{y} pesos argentinos"
+        format: "{y} pesos"
       }
     }
   },
@@ -480,7 +480,9 @@ Highcharts.chart("container_c", {
     {
       name: "Ahorrado en el mes",
       data: [60, 60, 43, 40, 20, 31, 16],
-      borderColor: "#5997DE"
+      borderColor: "#5997DE",
+      fill:"#5997DE",
+      backgroundColor: "#5997DE"
     }
   ]
 });
@@ -491,7 +493,7 @@ Highcharts.chart('container-pie_c', {
     type: 'pie'
   },
   title: {
-    text: 'Consolidado'
+    text: ' '
   },
   tooltip: {
     valueSuffix: '%'
