@@ -1,84 +1,16 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -95,13 +27,18 @@ body {
   background-color: whitesmoke;
   height: 100%;
   display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body .appSection {
+  background-color: white;
   width: 100%;
-  height: 100%;
+  max-width: 360px;
+  max-height: 649px;
+  min-height: 649px;
   align-items: center;
-  background-color: #ffffff;
 }
 
 /*Contenido tab estadisticas*/
@@ -375,7 +312,7 @@ body .appSection main {
   height: 60vh;
 }
 
-.objetivo-vacio {
+.objetivo {
   width: 275px;
   margin-top: 15px;
   padding: 20px;
@@ -384,32 +321,73 @@ body .appSection main {
   border: solid 1px #D9D9D9;
 }
 
-.objetivo-vacio p {
-  color: black;
-  font-family: Inter;
-  font-size: 16px;
-  margin: 15px 0;
+.objetivo-cargado {
+  width: 275px;
+  margin-top: 15px;
+  padding: 20px 15px 0 20px;
+  text-align: center;
+  border-radius: 22px;
+  border: solid 1px #D9D9D9;
+  display: inline-flex;
 }
 
-.objetivo-vacio .CTA {
+.objetivo-cargado img {
+  margin-top: -10px;
+  margin-left: 25px;
+}
+
+#grafico-casa {
+  margin-left: 8px;
+}
+
+.texto-card {
+  text-align: left;
+}
+
+.texto-card h2 {
+  font-size: 24px;
+}
+
+.texto-card p {
+  font-size: 14px;
+  color: #6D7072;
+  margin-top: 10px;
+}
+
+.CTA {
   background-color: #5538EE;
   color: white;
   font-size: 16px;
   font-family: Inter;
-  padding: 15px 60px;
+  padding: 15px 100px;
   border-radius: 50px;
   border: 0;
+}
+
+.CTA-sec {
+  border: solid 3px #5538EE;
+  color: #5538EE;
+  font-size: 16px;
+  font-family: Inter;
+  padding: 15px 55px;
+  border-radius: 50px;
+  margin-top: 5px;
 }
 
 .chat {
   margin-top: 15px;
   text-align: right;
-}
+} 
+
+.chat2 {
+  margin-top: -45px;
+  text-align: right;
+} 
 
 nav {
   background-color: white;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  width: 103vw;
+  width: 100vw;
   margin: 0;
   padding: 0;
   bottom: 0;
@@ -443,8 +421,209 @@ nav ul img {
 
 nav ul li a {
   text-decoration: none;
-  color: #6C7072;
+  color: #6C7072; 
 }
+
+#home2 {
+  margin-top: 15px;
+}
+
+button {
+  border: 0;
+  background: 0;
+}
+
+button a {
+  text-decoration: none;
+}
+
+#Agregar2 {
+  margin: -25px -10px auto -10px;
+}
+
+#Agregar2 img {
+  height: 80px;
+}
+
+.CTA-nuevo {
+  background-color: #5538EE;
+  color: white;
+  font-size: 16px;
+  font-family: Inter;
+  padding: 15px 60px;
+  border-radius: 50px;
+  border: 0;
+  margin-top: 15px;
+}
+
+#Modal1 {
+  width: 100%; 
+  height: 276px; 
+  margin-top: -270px; 
+  z-index: 1;
+  padding: 15px;
+}
+
+#Modal1 p {
+  margin-top: 30px;
+}
+
+#Modal2 {
+  width: 100%; 
+  height: 276px; 
+  z-index: 1;
+  padding: 15px;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  margin: -200px 0 0 -15px;
+}
+
+#Modal2 a {
+  color: white;
+  text-decoration: none;
+}
+
+#opciones {
+  display: inline-flex;
+}
+
+#ico-ingreso {
+  margin-right: 80px;
+}
+
+.top {
+  margin: 15px;
+}
+
+.top h1 {
+  margin-top: 15px; 
+  text-align: center;
+}
+
+.container {
+  display: grid; 
+  grid-template-columns: 170px 170px;
+  margin-top: -20px;
+}
+
+.card {
+  border: solid 1px #D9D9D9; 
+  border-radius: 22px; 
+  text-align: center; 
+  width: 120px; 
+  padding: 15px; 
+  margin-top:20px;
+}
+
+#Select {
+  border: solid 1px #5538EE; 
+  border-radius: 22px; 
+  text-align: center; 
+  width: 120px; 
+  padding: 15px; 
+  margin-top:20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+}
+
+.card p {
+  font-size: 12px;
+}
+
+.container a {
+  color: black;
+  text-decoration: none;
+}
+
+.botones {
+  text-align: center; 
+  margin-top: 5px;
+}
+
+.dinero p {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.dinero .money {
+  margin-top: 15px;
+}
+
+input {
+  font-weight: 700;
+  font-family: Inter;
+  color: black;
+} 
+
+#tentacles {
+  background: 0;
+  font-size: 34px;
+  color: black;
+}
+
+.Continuar {
+  margin-top: 300px;
+  text-align: center;
+}
+
+.Continuar2 {
+  margin-top: 260px;
+  text-align: center;
+}
+
+#fecha {
+  background: 0;
+  margin-top: 20px;
+}
+
+#final {
+  text-align: center;
+}
+
+#final h1 {
+  text-align: left;
+  margin: 20px auto;
+}
+
+.Inicio {
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+
+.objetivo-vacio {
+  width: 275px;
+  margin-top: 15px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 22px;
+  border: solid 1px #D9D9D9;
+}
+
+.objetivo-vacio p {
+  color: black;
+  font-family: Inter;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.objetivo-vacio .CTA {
+  background-color: #5538EE;
+  color: white;
+  font-size: 16px;
+  font-family: Inter;
+  padding: 15px 60px;
+  border-radius: 50px;
+  border: 0;
+}
+
+.chat {
+  margin-top: 15px;
+  text-align: right;
+}
+
 
 button {
   border: 0;
