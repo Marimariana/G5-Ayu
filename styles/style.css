@@ -17,7 +17,9 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: Inter;
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* Parametro */
 body {
@@ -27,16 +29,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /*Contenido tab estadisticas*/
-  /* Tab styling (optional) */
-  /* White focus ring - so you can see when it's focussed (not required) */
-  /* Section styling (optional) */
-  /* tab & panel colour */
-  /* 
-  Section styling (required)
-  Removes hidden sections from the keychain. 
-  Only used when JavaScript is available.
-  */
 }
 body .appSection {
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
@@ -47,6 +39,9 @@ body .appSection {
   min-height: 649px;
   align-items: center;
 }
+
+  /*Contenido tab estadisticas*/
+
 body .tl_container {
   margin: 2rem 0;
 }
@@ -113,8 +108,213 @@ body .e:hover,
 body .e:focus {
   background-color: rgba(85, 160, 255, 0.5);
 }
+
+  /* tab & panel colour */
+   /* 
+  Section styling (required)
+  Removes hidden sections from the keychain. 
+  Only used when JavaScript is available.
+  */
 body [role=tabpanel][aria-hidden=true] {
   display: none;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*Title*/
+h1 {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  color: black;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+h3 {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h4 {
+  color: #6D7072;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/*Estuctura Javi - Home*/
+body .appSection header {
+  color: #FFFFFF;
+  background-color: #F3F3F3;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 21px 9px;
+  height: 230px;
+}
+
+
+#Name {
+  margin-top: -15px;
+}
+
+.minitext {
+  color: #6D7072;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: Inter;
+}
+
+.money {
+  color: black;
+  font-size: 34px;
+  font-weight: 700;
+  font-family: Inter;
+}
+
+body .appSection header img {
+  vertical-align: middle;
+}
+
+body .appSection header .noti {
+  margin-left: 255px;
+}
+
+body .appSection header .saldo {
+  display: inline-flex;
+  padding-top: 10px;
+}
+
+body .appSection header .moneda {
+  color: #6D7072;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  background: none;
+  border: 0;
+  margin-left: 90px;
+  margin-top: 25px;
+}
+
+body .appSection header .accion {
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-flex;
+  list-style-type: none;
+  font-family: Inter;
+  margin-top: 30px;
+}
+
+body .appSection header a {
+  color: white;
+  text-decoration: none;
+}
+
+#Ingreso {
+  margin-right: 60px;
+  background-color: #5538EE;
+  padding: 10px 40px;
+  border-radius: 50px;
+}
+
+#Gasto {
+  background-color: #5538EE;
+  padding: 10px 40px;
+  border-radius: 50px;
+}
+
+
+body .appSection main {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 21px 9px;
+}
+
+.objetivo-vacio {
+  width: 275px;
+  margin-top: 15px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 22px;
+  border: solid 1px #D9D9D9;
+}
+
+.objetivo-vacio p {
+  color: black;
+  font-family: Inter;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.objetivo-vacio .CTA {
+  background-color: #5538EE;
+  color: white;
+  font-size: 16px;
+  font-family: Inter;
+  padding: 15px 60px;
+  border-radius: 50px;
+  border: 0;
+}
+
+.chat {
+  margin-top: 15px;
+  text-align: right;
+} 
+
+nav {
+  background-color: white;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+nav ul {
+  display: inline-flex;
+  list-style-type: none;
+  font-size: 12px;
+  color: #6C7072;
+}
+
+nav ul li {
+  text-align: center;
+  margin: 10px;
+  vertical-align: top;
+}
+
+nav ul img {
+  height: 24px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #6C7072; 
+}
+
+button {
+  border: 0;
+  background: 0;
+}
+
+button a {
+  text-decoration: none;
+}
+
+#Agregar2 {
+  margin: -25px -10px auto -10px;
+}
+
+#Agregar2 img {
+  height: 80px;
+}
+
+#Modal1 {
+  width: 100%; 
+  height: 276px; 
+  margin-top: -270px; 
+  z-index: 1;
+  padding: 15px;
+}
+
+#Modal1 p {
+  margin-top: 30px;
+}

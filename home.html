@@ -10,61 +10,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+
     <title>Inicio</title>
 </head>
 
 <body>
-    <script src="./script.js" type="text"></script>
     <div class='appSection'>
+
         <header>
-            <h1>Hola</h1>
-            <div class="saldo">
-                <h2>Saldo actual</h2>
-                <h4>
-                    $0,0
-                </h4>
+            <div>
+                <div class="noti"><img alt="Notificaciones" src="img/notif.svg"></div>
+                <div id="Name">
+                    <h1>Hola Nahuel <img alt=" " src="img/smile.svg"></h1>
+                </div>
+                <div class="saldo">
+                    <div>
+                        <div class="minitext">Saldo actual</div>
+                        <div class="money">$100.000</div>
+                    </div>
+                    <div>
+                        <select name="moneda" class="moneda">
+                            <option value="ARS">ARS</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <ul class="accion" role="toolbar">
+                        <a href="#">
+                            <li id="Ingreso" role="button">Ingreso</li>
+                        </a>
+                        <a href="#">
+                            <li id="Gasto" role="button">Gasto</li>
+                        </a>
+                    </ul>
+                </div>
             </div>
-            <ul id="accion" role="toolbar">
-                <li id="Ingreso" role="button">
-                <li id="Gasto" role="button">
-            </ul>
         </header>
+
         <main>
             <div class='container'>
-                <h2>Tus objetivos</h2>
-                <div class="objetivos">
-                    <icon></icon>
+                <h3>Tus objetivos</h3>
+                <div class="objetivo-vacio">
+                    <img alt=" " src="img/sad.svg">
                     <p>Aún no tienes objetivos cargados</p>
-                    <button class="modal-toggle">Agregar</button>
-
+                    <button><a href="home-modal1.html">
+                            <div id="Agregar1" class="CTA">Agregar</div>
+                        </a></button>
+                </div>
+                <div class="chat">
+                    <a href="#"><img alt="Ayuda" src="img/chat.svg"></a>
                 </div>
             </div>
         </main>
+
         <nav>
             <ul>
-                <li><a aria-current="page"><i></i>Home</a></li>
-                <li><a href="estadisticas.html"><i></i>Estadisticas</a></li>
-                <li><a href="objetivo.html"><i></i>Agregar objetivo</a></li>
-                <li><i></i>Objetivo</li>
-                <li><i></i>Perfil</li>
+                <li><a aria-current="page"><img alt=" " src="img/home.svg">Home</a></li>
+                <li><a href="estadisticas.html"><img alt=" " src="img/chart.svg">Análisis</a></li>
+                <li id="Agregar2"><a href=""><img alt=" " src="img/plus-circle.svg"></a></li>
+                <li><img alt=" " src="img/goals.svg">Objetivo</li>
+                <li><img alt=" " src="img/user.svg">Perfil</li>
             </ul>
         </nav>
 
-  
-        <div class="modal-overlay">      <div class="modal">
-            <h1>¿Empezamos? Definamos tu primer objetivo</h1>
-            <p>
-                Para poder ayudarte necesitamos que nos cuentes que estás necesitando.
-            </p>
-
-            <button id="signup">¡Empecemos!</button>
-        </div>
-</div>
-
-
-
     </div>
-   
 </body>
 
 </html>
