@@ -21,17 +21,20 @@
         <header>
             <div>
                 <div class="noti"><img alt="Notificaciones" src="img/notif.svg"></div>
-                <div id="Name"><h1>Hola Nahuel <img alt=" " src="img/smile.svg"></h1></div>
+                <div id="Name"><h1>Hola, Nahuel <img alt="" src="img/smile.svg"></h1></div>
                 <div class="saldo">
                     <div>
                         <div class="minitext">Saldo actual</div>
                         <div class="money">$100.000</div>
                     </div>        
                     <div>
-                        <select name="moneda" class="moneda">
+                      <!-- se omite momentaneamente
+                         <select name="moneda" class="moneda">
                             <option value="ARS">ARS</option>
                             <option value="USD">USD</option>
                         </select>
+                      -->  
+                       
                     </div>
                 </div>
                 <div>
@@ -55,7 +58,9 @@
                     <div><img alt=" " src="img/grafico-viaje.svg"></div>    
                 </div>
                 
-                <button><a href="objetivoB1.html"><div class="CTA-nuevo">Agregar objetivo nuevo</div></a></button>
+                <form action="objetivoB1.html" method="get" class="CTA">
+                    <button type="submit">Agregar objetivo</button>
+                </form>
 
                 <div class="chat">
                     <img alt="Ayuda" src="img/chat.svg">
