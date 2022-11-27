@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -34,7 +102,7 @@ body {
 
 body .appSection {
   background-color: white;
-  width: 100%;
+  width: 100vw;
   align-items: center;
 }
 
@@ -97,8 +165,7 @@ body .tl_section h2 {
 
 body .a,
 body .a:hover,
-body .a:focus,
-body a:visited {
+body .a:focus {
   color: #6200EE;
   border-radius: 40px;
 }
@@ -134,22 +201,27 @@ body [role=tabpanel][aria-hidden=true] {
 }
 
 /*Graficos*/
-#container, #container_b, #container_c {
+#container,
+#container_b,
+#container_c {
   min-width: 310px;
   max-width: 800px;
   height: 30vh;
   margin: 0 auto;
 }
 
-#container-pie, #container-pie_b, #container-pie_c {
+#container-pie,
+#container-pie_b,
+#container-pie_c {
   height: 30vh;
   width: 60vw;
 }
 
 .highcharts-point.highcharts-color-0 {
-  fill:#6200EE;
+  fill: #6200EE;
 }
-.highcharts-data-label-connector.highcharts-color-1, 
+
+.highcharts-data-label-connector.highcharts-color-1,
 .highcharts-label.highcharts-data-label.highcharts-data-label-color-0,
 .highcharts-label.highcharts-data-label.highcharts-data-label-color-1,
 .highcharts-data-label-connector.highcharts-color-0 {
@@ -161,6 +233,7 @@ body [role=tabpanel][aria-hidden=true] {
   flex-direction: row;
   justify-content: space-around;
 }
+
 .resumen .money {
   font-size: 20px;
 }
@@ -168,16 +241,17 @@ body [role=tabpanel][aria-hidden=true] {
 
 .consolidado {
   display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    align-content: space-around;
-    justify-content: space-between;
-    border-top: solid 1px grey;
-    padding: 24px 16px;
-    width: 100vw;
-    margin-top: 24px;
-    background-color: white;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: space-around;
+  justify-content: space-between;
+  border-top: solid 1px grey;
+  padding: 24px 16px;
+  width: 100vw;
+  margin-top: 24px;
+  background-color: white;
 }
+
 .consolidado .money {
   font-size: 20px;
 }
@@ -252,7 +326,7 @@ body .appSection header img {
 }
 
 body .appSection header .noti {
-  margin-left: 255px;
+  margin-left: 30vh;
 }
 
 body .appSection header .saldo {
@@ -302,11 +376,11 @@ body .appSection header a {
 body .appSection main {
   display: flex;
   justify-content: space-between;
-  padding: 10px 21px 9px;
+  padding: 25px 20px 25px;
   flex-direction: column;
   align-content: space-between;
   align-items: center;
-  height: 60vh;
+  height: 55vh;
 }
 
 .objetivo {
@@ -372,14 +446,15 @@ body .appSection main {
 }
 
 .chat {
-  margin-top: 15px;
+  margin-top: 20vh;
+  position: relative;
   text-align: right;
-} 
+}
 
 .chat2 {
   margin-top: -45px;
   text-align: right;
-} 
+}
 
 nav {
   background-color: white;
@@ -396,20 +471,21 @@ nav ul {
   font-size: 12px;
   color: #6C7072;
   display: flex;
-  list-style-type: none;
   font-size: 12px;
-  color: #6C7072;
   align-content: center;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 
-nav ul li {
+nav ul li a {
   text-align: center;
   margin: 10px;
   vertical-align: top;
+  display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
+  align-items: center;
 }
 
 nav ul img {
@@ -418,7 +494,12 @@ nav ul img {
 
 nav ul li a {
   text-decoration: none;
-  color: #6C7072; 
+  color: #6C7072;
+}
+
+[aria-current]:not([aria-current="false"]) {
+  font-weight: bold;
+  color: #5538EE;
 }
 
 #home2 {
@@ -454,9 +535,9 @@ button a {
 }
 
 #Modal1 {
-  width: 100%; 
-  height: 276px; 
-  margin-top: -270px; 
+  width: 100%;
+  height: 276px;
+  margin-top: -270px;
   z-index: 1;
   padding: 15px;
 }
@@ -466,8 +547,8 @@ button a {
 }
 
 #Modal2 {
-  width: 100%; 
-  height: 276px; 
+  width: 100%;
+  height: 276px;
   z-index: 1;
   padding: 15px;
   font-size: 11px;
@@ -494,37 +575,39 @@ button a {
 }
 
 .top h1 {
-  margin-top: 15px; 
+  margin-top: 15px;
   text-align: center;
 }
 
-.container {
-  display: grid; 
-  grid-template-columns: 170px 170px;
-  margin-top: -20px;
-}
 
 .card {
-  border: solid 1px #D9D9D9; 
-  border-radius: 22px; 
-  text-align: center; 
-  width: 120px; 
-  padding: 15px; 
-  margin-top:20px;
+  border: solid 1px #D9D9D9;
+  border-radius: 22px;
+  text-align: center;
+  width: 120px;
+  padding: 15px;
+  margin-top: 20px;
 }
 
 #Select {
-  border: solid 1px #5538EE; 
-  border-radius: 22px; 
-  text-align: center; 
-  width: 120px; 
-  padding: 15px; 
-  margin-top:20px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+  border: solid 1px #5538EE;
+  border-radius: 22px;
+  text-align: center;
+  width: 120px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card p {
   font-size: 12px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 .container a {
@@ -533,7 +616,7 @@ button a {
 }
 
 .botones {
-  text-align: center; 
+  text-align: center;
   margin-top: 5px;
 }
 
@@ -551,7 +634,7 @@ input {
   font-weight: 700;
   font-family: Inter;
   color: black;
-} 
+}
 
 #tentacles {
   background: 0;
@@ -616,12 +699,6 @@ input {
   border: 0;
 }
 
-.chat {
-  margin-top: 15px;
-  text-align: right;
-}
-
-
 button {
   border: 0;
   background: 0;
@@ -649,4 +726,99 @@ button a {
 
 #Modal1 p {
   margin-top: 30px;
+}
+
+/*PERFIL */
+
+
+.faq-container {
+  text-align: left;
+  margin: auto;
+  position: relative;
+  width: 95vw;
+}
+.faq-container article p { margin: 10px 15px 15px 15px; }
+.faq-container input[type=checkbox],
+.faq-container input[type=radio] {
+  background-color: transparent;
+  border: 1px solid transparent;
+  height: 1px;
+  position: absolute;
+  width: 1px;
+  margin: 4px 0 0 0;
+  outline: none;
+}
+.faq-container input[type=checkbox] + label,
+.faq-container input[type=radio] + label {
+  background: #EEEEEE;
+  border-bottom: 1px solid #fff;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 32px;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 20;
+}
+.faq-container input[type=checkbox] + label:before,
+.faq-container input[type=radio] + label:before,
+.faq-container input[type=checkbox] + label:after,
+.faq-container input[type=radio] + label:after {
+  display: inline-block;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+.faq-container input[type=checkbox] + label:before,
+.faq-container input[type=radio] + label:before {
+  padding-right: 10px;
+}
+.faq-container input[type=checkbox] + label:after,
+.faq-container input[type=radio] + label:after {
+  float: right;
+  padding-left: 10px;
+}
+.faq-container input[type=checkbox] + label:hover,
+.faq-container input[type=radio] + label:hover { background: #D6D6D6; }
+.faq-container input[type=checkbox]:checked + label,
+.faq-container input[type=radio]:checked + label { background: #EEEEEE; }
+.faq-container input[type=checkbox]:focus + label,
+.faq-container input[type=radio]:focus + label { background: #BEBEBE; }
+.faq-container input[type=checkbox]:checked + label:hover,
+.faq-container input[type=radio]:checked + label:hover { background: #D6D6D6; }
+.faq-container input[type=checkbox]:checked + label:after,
+.faq-container input[type=radio]:checked + label:after {
+	-webkit-transform: rotate(90deg);
+	   -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	     -o-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+.faq-container input[type=checkbox] + label + article,
+.faq-container input[type=radio] + label + article {
+  display: none;
+  /* display: none; - Content is ignored by screen readers, additionally stops tabbing through hidden content */
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+  /* 0, 0, hidden; - Content is ignored by screen readers, but tab key still steps through hidden elements */
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+.faq-container input[type=checkbox]:checked + label + article,
+.faq-container input[type=radio]:checked + label + article {
+  display: block;
+  height: auto;
+  max-height: 2000px;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
