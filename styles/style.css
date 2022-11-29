@@ -365,6 +365,8 @@ body .appSection header a {
   text-decoration: none;
 }
 
+
+
 #Ingreso {
   margin-right: 60px;
   background-color: #5538EE;
@@ -601,7 +603,7 @@ button a {
 }
 
 .top {
-  margin: 15px;
+  padding: 20px 16px 0 16px;
 }
 
 .top h1 {
@@ -680,9 +682,11 @@ input {
 .fechas label {
   margin-top: 32px;
 }
+
 .fechas select {
   margin-top: 8px;
 }
+
 .Continuar {
   text-align: center;
 }
