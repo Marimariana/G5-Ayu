@@ -621,6 +621,10 @@ button a {
   margin-top: 20px;
 }
 
+.card.hover-option {
+  border: solid 4px #6200ee6b;
+}
+
 #Select {
   border: solid 1px #5538EE;
   border-radius: 22px;
