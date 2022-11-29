@@ -103,7 +103,13 @@ body {
 body .appSection {
   background-color: white;
   width: 100vw;
+  height: 100vh;
   align-items: center;
+}
+
+.appSection .modal-img {
+  height: 100vh;
+  width: 100vw;
 }
 
 /*Contenido tab estadisticas*/
@@ -247,7 +253,7 @@ body [role=tabpanel][aria-hidden=true] {
   justify-content: space-between;
   border-top: solid 1px grey;
   padding: 24px 16px;
-  width: 100vw;
+  width: 85vw;
   margin-top: 24px;
   background-color: white;
 }
@@ -443,6 +449,7 @@ body .appSection main {
   padding: 15px 55px;
   border-radius: 50px;
   margin-top: 5px;
+  width: 65vw;
 }
 
 .chat {
@@ -535,26 +542,49 @@ button a {
 }
 
 #Modal1 {
-  width: 100%;
-  height: 276px;
-  margin-top: -270px;
+  width: 90vw;
+  position: fixed;
+  background-color: white;
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
   z-index: 1;
-  padding: 15px;
+  margin-top: -28vh;
 }
 
 #Modal1 p {
-  margin-top: 30px;
+  margin: 16px 0 24px;
+}
+
+#Modal1 .CTA {
+  width: 90vw;
+}
+
+.botones .CTA {
+  width: 90vw;
+  margin-bottom: 12px;
+}
+
+.botones {
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #Modal2 {
-  width: 100%;
-  height: 276px;
+  width: 90vw;
+  position: fixed;
+  background-color: white;
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
   z-index: 1;
-  padding: 15px;
-  font-size: 11px;
-  color: white;
-  text-align: center;
-  margin: -200px 0 0 -15px;
 }
 
 #Modal2 a {
@@ -642,13 +672,22 @@ input {
   color: black;
 }
 
+.fechas {
+  display: flex;
+  flex-direction: column;
+}
+
+.fechas label {
+  margin-top: 32px;
+}
+.fechas select {
+  margin-top: 8px;
+}
 .Continuar {
-  margin-top: 300px;
   text-align: center;
 }
 
 .Continuar2 {
-  margin-top: 260px;
   text-align: center;
 }
 
@@ -716,17 +755,6 @@ button a {
   height: 80px;
 }
 
-#Modal1 {
-  width: 100%;
-  height: 276px;
-  margin-top: -270px;
-  z-index: 1;
-  padding: 15px;
-}
-
-#Modal1 p {
-  margin-top: 30px;
-}
 
 /*PERFIL */
 
@@ -737,7 +765,11 @@ button a {
   position: relative;
   width: 95vw;
 }
-.faq-container article p { margin: 10px 15px 15px 15px; }
+
+.faq-container article p {
+  margin: 10px 15px 15px 15px;
+}
+
 .faq-container input[type=checkbox],
 .faq-container input[type=radio] {
   background-color: transparent;
@@ -748,8 +780,9 @@ button a {
   margin: 4px 0 0 0;
   outline: none;
 }
-.faq-container input[type=checkbox] + label,
-.faq-container input[type=radio] + label {
+
+.faq-container input[type=checkbox]+label,
+.faq-container input[type=radio]+label {
   background: #EEEEEE;
   border-bottom: 1px solid #fff;
   color: #333;
@@ -762,43 +795,60 @@ button a {
   position: relative;
   z-index: 20;
 }
-.faq-container input[type=checkbox] + label:before,
-.faq-container input[type=radio] + label:before,
-.faq-container input[type=checkbox] + label:after,
-.faq-container input[type=radio] + label:after {
+
+.faq-container input[type=checkbox]+label:before,
+.faq-container input[type=radio]+label:before,
+.faq-container input[type=checkbox]+label:after,
+.faq-container input[type=radio]+label:after {
   display: inline-block;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
 }
-.faq-container input[type=checkbox] + label:before,
-.faq-container input[type=radio] + label:before {
+
+.faq-container input[type=checkbox]+label:before,
+.faq-container input[type=radio]+label:before {
   padding-right: 10px;
 }
-.faq-container input[type=checkbox] + label:after,
-.faq-container input[type=radio] + label:after {
+
+.faq-container input[type=checkbox]+label:after,
+.faq-container input[type=radio]+label:after {
   float: right;
   padding-left: 10px;
 }
-.faq-container input[type=checkbox] + label:hover,
-.faq-container input[type=radio] + label:hover { background: #D6D6D6; }
-.faq-container input[type=checkbox]:checked + label,
-.faq-container input[type=radio]:checked + label { background: #EEEEEE; }
-.faq-container input[type=checkbox]:focus + label,
-.faq-container input[type=radio]:focus + label { background: #BEBEBE; }
-.faq-container input[type=checkbox]:checked + label:hover,
-.faq-container input[type=radio]:checked + label:hover { background: #D6D6D6; }
-.faq-container input[type=checkbox]:checked + label:after,
-.faq-container input[type=radio]:checked + label:after {
-	-webkit-transform: rotate(90deg);
-	   -moz-transform: rotate(90deg);
-	    -ms-transform: rotate(90deg);
-	     -o-transform: rotate(90deg);
-	        transform: rotate(90deg);
+
+.faq-container input[type=checkbox]+label:hover,
+.faq-container input[type=radio]+label:hover {
+  background: #D6D6D6;
 }
-.faq-container input[type=checkbox] + label + article,
-.faq-container input[type=radio] + label + article {
+
+.faq-container input[type=checkbox]:checked+label,
+.faq-container input[type=radio]:checked+label {
+  background: #EEEEEE;
+}
+
+.faq-container input[type=checkbox]:focus+label,
+.faq-container input[type=radio]:focus+label {
+  background: #BEBEBE;
+}
+
+.faq-container input[type=checkbox]:checked+label:hover,
+.faq-container input[type=radio]:checked+label:hover {
+  background: #D6D6D6;
+}
+
+.faq-container input[type=checkbox]:checked+label:after,
+.faq-container input[type=radio]:checked+label:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.faq-container input[type=checkbox]+label+article,
+.faq-container input[type=radio]+label+article {
   display: none;
   /* display: none; - Content is ignored by screen readers, additionally stops tabbing through hidden content */
   height: 0;
@@ -811,8 +861,9 @@ button a {
   -ms-transition: all 1.5s ease-in-out;
   transition: all 1.5s ease-in-out;
 }
-.faq-container input[type=checkbox]:checked + label + article,
-.faq-container input[type=radio]:checked + label + article {
+
+.faq-container input[type=checkbox]:checked+label+article,
+.faq-container input[type=radio]:checked+label+article {
   display: block;
   height: auto;
   max-height: 2000px;
